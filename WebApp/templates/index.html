@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Review Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Review Analyzer</h1>
+        <div class="review-form">
+            <textarea id="review-text" placeholder="Enter your hotel review here (minimum 100 characters)..." oninput="updateCharCount()"></textarea>
+            <div class="char-count" id="char-count">0 characters</div>
+            <button onclick="getPrediction()">Analyze Review</button>
+        </div>
+        <div class="result" id="result-container" style="display: none;">
+            <div class="rating">
+                <h3>Rating:</h3>
+                <div id="stars-container"></div>
+            </div>
+            <div class="confidence">
+                <h3>Confidence:</h3>
+                <div class="confidence-bar">
+                    <div id="confidence-fill"></div>
+                </div>
+                <span id="confidence-text"></span>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 

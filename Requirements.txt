@@ -1,0 +1,9 @@
+numpy
+pandas
+sklearn
+tensorflow
+keras
+h5py
+flask
+
+# python version 3.10.0
