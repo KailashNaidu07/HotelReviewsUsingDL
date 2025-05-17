@@ -1,6 +1,6 @@
 numpy
 pandas
-sklearn
+sklearn==0.0
 tensorflow
 keras
 h5py
